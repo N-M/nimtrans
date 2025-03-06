@@ -3,84 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <title>Transport Kamionom - NIM TRANS</title>
-    <meta name="description" content="Nudimo pouzdan transport robe solo kamionom sa utovarnom rampom širom Srbije i zemalja EX-YU.  Garantujemo sigurnost i efikasnost prevoza vaše robe.">
+    <meta name="description" content="Nudimo pouzdan transport robe solo kamionom sa utovarnom rampom širom Srbije i zemalja EX-YU. Garantujemo sigurnost i efikasnost prevoza vaše robe.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --primary-color: #1a4d80;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ffc107;
+        }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            background-color: #f9f9f9;
+            background-color: var(--secondary-color);
             color: #333;
+            line-height: 1.6;
         }
-        header, footer {
-            background-color: #333;
+
+        header {
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            position: relative;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
         nav {
-            background: #444;
-            padding: 10px;
+            background: var(--primary-color);
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1em;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
         }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
         section {
-            padding: 50px 20px;
-            margin: 20px auto;
-            max-width: 800px;
+            padding: 30px 30px;
+            margin: 30px auto;
+            max-width: 900px;
             background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
-        h1, h2 {
+
+        .vehicle-specs {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .vehicle-specs h3 {
+            color: var(--primary-color);
             margin-top: 0;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spec-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            margin: 15px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .services-list li:before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #2c7be5;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            section {
+                padding: 30px 20px;
+                margin: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Transport Solo kamionom</h1>
+        <h1>NIM TRANS - Transport Solo Kamionom</h1>
     </header>
 
-    
-    <section id="usluge">
-        <p>Nudimo pouzdan domaci transport robe solo kamionom sa utovarnom rampom širom cele Srbije.</p>
+    <section>
+        <h2>Naše Usluge</h2>
+        <p>Nudimo pouzdan domaći transport robe solo kamionom sa utovarnom rampom širom cele Srbije.</p>
         <p>Garantujemo sigurnost i efikasnost prevoza vaše robe.</p>
-        <ul>
+        
+        <ul class="services-list">
             <li>Brz i siguran prevoz robe</li>
             <li>CMR osiguranje</li>
+            <li>Profesionalna i ljubazna usluga</li>
+            <li>Pokrivenost cele Srbije</li>
         </ul>
 
-        <p>
-            Dimenzija Vozila: <br>
-            D 7.20<br>
-            Š 2.45<br>
-            V 2.45<br>
-            17EP<br>
-            Nosivost 6t<br>
-            Nosivost rampe 1.500 kg<br>
-
-        </p>
+        <div class="vehicle-specs">
+            <h3>Specifikacije Vozila</h3>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <strong>Dimenzije:</strong><br>
+                    Dužina: 7.20m<br>
+                    Širina: 2.45m<br>
+                    Visina: 2.45m
+                </div>
+                <div class="spec-item">
+                    <strong>Kapacitet:</strong><br>
+                    17 Europaleta<br>
+                    Nosivost: 6t<br>
+                    Nosivost rampe: 1.500 kg
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="o-nama">
-        <h2>Kontakt</h2>
-        <p>Telefon: <a href="tel:+381631795956">063 179 59 56</a></p>
-        <p>Email: <a href="mailto:nemanja@nimtrans.rs">nemanja@nimtrans.rs</a></p>
+        <h2>Kontaktirajte Nas</h2>
+        <div class="contact-info">
+            <p>Telefon: <a href="tel:+381631795956">063 179 59 56</a></p>
+            <p>Email: <a href="mailto:nemanja@nimtrans.rs">nemanja@nimtrans.rs</a></p>
+            <p>Lokacija: Sopot, Beograd</p>
+        </div>
     </section>
 
-
-
     <footer>
-        <p>&copy; 2025 Transport Kamionom. Sva prava zadržana.</p>
+        <p>&copy; 2024 NIM TRANS - Transport Kamionom. Sva prava zadržana.</p>
     </footer>
 </body>
 </html>
